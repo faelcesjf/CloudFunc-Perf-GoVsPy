@@ -32,15 +32,15 @@ Este projeto investiga o desempenho e a eficiência de custos de Google Cloud Fu
 
 ### Execução
 
-Explique como executar os benchmarks, incluindo comandos necessários e qualquer configuração específica.
+[Explique como executar os benchmarks, incluindo comandos necessários e qualquer configuração específica.]
 
 ## Estrutura do Projeto
 
-Descreva a estrutura de diretórios do projeto, explicando o propósito de cada pasta e arquivo importante.
+[Descreva a estrutura de diretórios do projeto, explicando o propósito de cada pasta e arquivo importante.]
 
 ## Benchmarking e Análise
 
-Detalhe como os testes de benchmark serão executados e como os resultados serão analisados. Inclua informações sobre as métricas de desempenho e eficiência de custos que serão medidas.
+[Detalhe como os testes de benchmark serão executados e como os resultados serão analisados. Inclua informações sobre as métricas de desempenho e eficiência de custos que serão medidas.]
 
 ## Contribuindo
 
