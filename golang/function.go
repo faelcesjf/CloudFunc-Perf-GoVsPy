@@ -1,7 +1,6 @@
 package function
 
 import (
-	"encoding/json"
 	"fmt"
 	"math/rand"
 	"net/http"
@@ -15,7 +14,7 @@ func init() {
 }
 
 func main(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("MergeSort em GO!")
+	fmt.Println("Inciando cloud function sort_random_array GOLANG!")
 
 	var numbers []int
 
@@ -25,17 +24,8 @@ func main(w http.ResponseWriter, r *http.Request) {
 		numbers = append(numbers, rand.Intn(1000000))
 	}
 
-	numbers = mergeSort(numbers)
-
-	jsonData, err := json.Marshal(numbers)
-	if err != nil {
-		http.Error(w, "Erro ao codificar números em JSON", http.StatusInternalServerError)
-		return
-	}
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write(jsonData)
-
+	_ = mergeSort(numbers)
+	fmt.Println("Fim Execução cloud function sort_random_array GOLANG!")
 }
 
 func mergeSort(arr []int) []int {
