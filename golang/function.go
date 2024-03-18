@@ -11,7 +11,7 @@ import (
 )
 
 func init() {
-	functions.HTTP("merge-sort-function", main)
+	functions.HTTP("sort_random_array", main)
 }
 
 func main(w http.ResponseWriter, r *http.Request) {
@@ -21,7 +21,7 @@ func main(w http.ResponseWriter, r *http.Request) {
 
 	rand.Seed(time.Now().UnixNano())
 
-	for i := 0; i < 100000; i++ {
+	for i := 0; i < 1000000; i++ {
 		numbers = append(numbers, rand.Intn(1000000))
 	}
 

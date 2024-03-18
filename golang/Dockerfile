@@ -2,6 +2,7 @@ FROM golang:1.22-alpine
 
 ENV LOCAL_ONLY=TRUE
 ENV PORT=8080
+ENV FUNCTION_TARGET=sort_random_array
 
 WORKDIR /app
 
