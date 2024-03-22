@@ -2,7 +2,7 @@ FROM golang:1.22-alpine
 
 ENV LOCAL_ONLY=TRUE
 ENV PORT=8080
-ENV FUNCTION_TARGET=sort_random_array
+ENV FUNCTION_TARGET=dec-parana
 
 WORKDIR /app
 
@@ -11,8 +11,8 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /docker-gs-ping ./cmd/main.go
+RUN go build -o /start ./cmd/main.go
 
 EXPOSE 8080
 
-CMD ["/docker-gs-ping"]
+CMD ["/start"]

@@ -1,4 +1,4 @@
-module example.com/hello
+module veri.com/dec-parana
 
 go 1.22.1
 
