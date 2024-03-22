@@ -15,16 +15,17 @@ class DecParana:
             response = self.get_caixa_postal()
             empresas = self.listar_empresas(response)
 
+            mensagens = []
+
             for empresa in empresas:
                 mensagens_empresa = self.get_mensagens(empresa)
 
                 if mensagens_empresa:
                     status = self.verificar_situacao_leitura(mensagens_empresa)
                     if status == 'mensagem lida':
-                        conteudo = self.get_conteudo_mensagem(mensagens_empresa)
-                        return conteudo
+                        self.get_conteudo_mensagem(mensagens_empresa)
 
-                return mensagens_empresa
+            return mensagens
 
         except Exception as ex:
             logging.error(ex, 'DEC Parana')
