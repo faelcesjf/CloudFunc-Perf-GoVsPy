@@ -1,6 +1,0 @@
-
-google-cloud-pubsub
-google-cloud-functions
-google-cloud-storage
-avro
-protobuf
