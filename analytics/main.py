@@ -30,7 +30,7 @@ def main():
         mem_limit = '128m'
         cpu_period = 100000
         cpu_quota = 20000
-        container_img_name = "main"
+        container_img_name = "img-python"
         container = client.containers.run(container_img_name,
                                           detach=True,
                                           ports={'8080/tcp': 8080},
@@ -41,9 +41,10 @@ def main():
 
         print("Contêiner executando com ID:", container.id)
         try:
-            time.sleep(5)
+            time.sleep(8)
             collector = DockerMetricsCollector(container.id)
             collector.start()
+            time.sleep(5)
             send_request()
 
             collector.stop()
